@@ -1,21 +1,17 @@
 .main-nav,
 .flex-nav {
-  display: flex;
-  align-items: center;
+  @include flexbox(flex, $ai: center);
 }
 
 .page-header .logo {
-  color: var(--logo-color);
+  color: $logo-color;
   text-decoration: none;
   font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  @include font(26px, 1.19, 700, 0.03em);
 }
 
 .page-header .blue {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .page-nav {
@@ -25,33 +21,30 @@
 
 .page-nav .item {
   margin-right: 50px;
-}
 
-.page-nav .item:not(:last-child) {
-  margin-right: 40px;
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
 }
 
 .page-nav .link {
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
-  color: var(--secondary-text-color);
+  color: $secondary-text-color;
   text-decoration: none;
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font(14px, 1.14, 500, 0.02em);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.page-nav .link:hover {
-  color: var(--accent-color);
+  &:hover {
+    color: $accent-color;
+  }
 }
 
 .page-nav .link.current {
   position: relative;
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .link.current::after {
@@ -61,7 +54,7 @@
   height: 4px;
   bottom: 0px;
   left: 0px;
-  background: var(--accent-color);
+  background: $accent-color;
   border-radius: 2px;
 }
 
@@ -75,25 +68,26 @@
 }
 
 .contacts-nav .contacts-link {
-  display: inline-flex;
-  align-items: center;
-  color: var(--additional-text-color);
+  @include flexbox(flex, $ai: center);
+  color: $additional-text-color;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font(14px, 1.14, 500, 0.02em);
 }
 
 .contacts-link {
   justify-content: center;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
-.contacts-link:hover,
-.contacts-link:focus,
-.contacts-link:hover svg {
-  color: var(--accent-color);
+.contacts-link svg {
+  &:hover {
+    color: $accent-color;
+  }
 }
 
 .icon-envelope {

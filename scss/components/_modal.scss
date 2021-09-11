@@ -21,7 +21,7 @@
   min-width: 528px;
   min-height: 581px;
   padding: 40px;
-  background-color: #ffffff;
+  background-color: $main-background-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -44,15 +44,18 @@ button:focus-visible {
   width: 30px;
   height: 30px;
   box-sizing: border-box;
-  background: #ffffff;
+  background: $main-background-color;
+
+  &:focus-visible {
+    outline: none;
+  }
 }
 
-.modal-button:hover svg,
-.modal-button:focus svg {
-  fill: var(--accent-color);
-}
-.modal-button:focus-visible {
-  outline: none;
+.modal-button svg {
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
 }
 
 .modal-close {
@@ -68,12 +71,9 @@ button:focus-visible {
 .modal-title {
   margin-top: 0;
   margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font(20px, 1.15, 700, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
+  color: $secondary-text-color;
 }
 
 .js-form {
@@ -85,44 +85,46 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+
+  &:hover svg,
+  &:focus svg,
+  &:focus-within svg {
+    fill: $accent-color;
+  }
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    font-size: 12px;
+  }
 }
 
 .form-field input {
   padding-left: 42px;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+  }
 }
 
-.form-field input:hover,
-.form-field textarea:hover {
-  outline: none;
-  border: 1px solid #2196f3;
-}
-.form-field input:focus,
-.form-field textarea:focus {
-  outline: none;
-  border: 1px solid #2196f3;
-}
-
-.form-field:hover svg,
-.form-field:focus svg,
-.form-field:focus-within svg {
-  fill: #2196f3;
+.form-field textarea {
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+  }
 }
 
 .form-field label {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  @include font(12px, 1.17, 0.01em);
   margin-bottom: 4px;
-  color: var(--additional-text-color);
+  color: $additional-text-color;
 }
 
 .form-field.comment {
   margin-bottom: 20px;
-}
-
-.form-input:hover .form-input:focus .form-input:hover svg {
-  color: var(--accent-color);
 }
 
 .form-input {
@@ -130,6 +132,15 @@ button:focus-visible {
   padding: 11px 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:hover svg {
+    color: $accent-color;
+  }
 }
 
 .form-pic {
@@ -138,7 +149,7 @@ button:focus-visible {
   height: 18px;
   bottom: 11px;
   left: 12px;
-  fill: var(--secondary-text-color);
+  fill: $secondary-text-color;
 }
 
 .form-field textarea {
@@ -150,25 +161,18 @@ button:focus-visible {
   cursor: pointer;
 }
 
-.form-field ::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-  font-size: 12px;
-}
-
 .check-form {
   text-align: center;
   margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--additional-text-color);
+  @include font(14px, 1.71, 0.03em);
+  color: $additional-text-color;
 }
 
 .check-form input {
   width: 16px;
   height: auto;
   margin-right: 8px;
-  border: 2px solid var(--secondary-text-color);
+  border: 2px solid $secondary-text-color;
 }
 
 .check-form .check-label input[type="checkbox"] {
@@ -185,14 +189,14 @@ button:focus-visible {
   left: 0;
   border: 2px solid #555555;
   border-radius: 3px;
-  background-color: white;
+  background-color: $main-background-color;
 }
 .check-form .check-label input[type="checkbox"]:checked:after {
   content: "";
   display: block;
   width: 5px;
   height: 10px;
-  border: solid #ffffff;
+  border: solid $main-background-color;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -203,13 +207,13 @@ button:focus-visible {
 }
 
 .check-form .check-label input[type="checkbox"]:checked:before {
-  background-color: var(--accent-color);
-  border: 2px solid var(--accent-color);
+  background-color: $accent-color;
+  border: 2px solid $accent-color;
 }
 
 .check-form .check-label input[type="checkbox"]:hover:after,
 .check-form .check-label input[type="checkbox"]:focus:after {
-  border: 2px solid #ffffff;
+  border: 2px solid $main-background-color;
   content: "";
   display: block;
   width: 5px;
@@ -224,14 +228,14 @@ button:focus-visible {
 }
 
 .check-form a {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .check-icon {
   display: inline-block;
   width: 16px;
   height: 15px;
-  border: 2px solid fill var(--secondary-text-color);
+  border: 2px solid fill $secondary-text-color;
 }
 
 .submit-btn {
@@ -242,17 +246,14 @@ button:focus-visible {
   min-height: 50px;
   padding: 10px 32px;
   border: 0;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  letter-spacing: 0.06em;
+  @include font(16px, 1.9, 700, 0.06em);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  background-color: var(--accent-color);
+  background-color: $accent-color;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: #ffffff;
+  color: $main-background-color;
   border-radius: 4px;
-}
 
-.submit-btn:hover {
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
 }

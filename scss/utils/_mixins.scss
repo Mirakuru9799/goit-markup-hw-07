@@ -1,0 +1,12 @@
+@mixin font($fs, $lh, $fw: 400, $ls: 0.03em) {
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+  letter-spacing: $ls;
+}
+
+@mixin flexbox($ds, $jc: flex-start, $ai: stretch) {
+  display: $ds;
+  justify-content: $jc;
+  align-items: $ai;
+}

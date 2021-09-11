@@ -27,9 +27,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -39,9 +36,9 @@ body {
   color: #000000;
   text-decoration: none;
   font-family: Raleway;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  font-weight: 700;
   letter-spacing: 0.03em;
 }
 
@@ -70,9 +67,9 @@ body {
   padding-bottom: 24px;
   color: #212121;
   text-decoration: none;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  font-weight: 500;
   letter-spacing: 0.02em;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -110,20 +107,17 @@ body {
 }
 
 .contacts-nav .contacts-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   color: #757575;
   text-decoration: none;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  font-weight: 500;
   letter-spacing: 0.02em;
 }
 
@@ -135,11 +129,9 @@ body {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-link:hover, .contacts-link:focus {
-  color: #2196f3;
-}
-
-.contacts-link svg:hover {
+.contacts-link:hover,
+.contacts-link:focus,
+.contacts-link:hover svg {
   color: #2196f3;
 }
 
@@ -164,15 +156,6 @@ body {
 }
 
 .hero-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -180,6 +163,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
@@ -190,6 +176,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .hero-title {
@@ -197,8 +186,8 @@ body {
   color: #ffffff;
   width: 696px;
   font-size: 44px;
-  line-height: 1.36;
   font-weight: 900;
+  line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -208,15 +197,14 @@ body {
   color: #ffffff;
   background-color: #2196f3;
   border: none;
-  font-size: 16px;
-  line-height: 1.87;
   font-weight: 700;
-  letter-spacing: 0.06em;
   font-family: inherit;
+  line-height: 1.87;
   border-radius: 4px;
   padding: 10px 32px;
   min-width: 200px;
   text-align: center;
+  letter-spacing: 0.06em;
 }
 
 .features {
@@ -232,10 +220,13 @@ body {
 
 .features-nav li {
   width: 270px;
+}
+
+.features-nav li {
   margin: 0 30px 0 0;
 }
 
-.features-nav li:last-child(1) {
+.features-nav li:nth-last-child(1) {
   margin: 0;
 }
 
@@ -315,7 +306,7 @@ body {
   margin: 0 30px 0 0;
 }
 
-.development-nav li:last-child(1) {
+.development-nav li:nth-last-child(1) {
   margin: 0;
 }
 
@@ -332,9 +323,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -346,11 +334,11 @@ body {
   left: 0;
   bottom: 0;
   margin: 0;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  font-weight: 700;
-  letter-spacing: 0.03em;
   text-align: center;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   background: rgba(47, 48, 58, 0.8);
   color: #ffffff;
@@ -392,13 +380,12 @@ body {
 }
 
 .team .title {
-  color: #212121;
+  color: secondary-text-color;
   margin-top: 0;
   margin-bottom: 10px;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  font-weight: 500;
-  letter-spacing: 0.03em;
   text-align: center;
 }
 
@@ -407,8 +394,6 @@ body {
   margin-bottom: 0;
   font-size: 16px;
   line-height: 1.19;
-  font-weight: 400;
-  letter-spacing: 0.03em;
   text-align: center;
   color: #757575;
 }
@@ -426,11 +411,11 @@ body {
   padding: 0 5px;
 }
 
-.social-nav li:nth-last-child(1) {
+.social-nav li:nth-child(1) {
   padding-left: 0;
 }
 
-.social-nav li:nth-last-child(4) {
+.social-nav li:nth-child(4) {
   padding-right: 0;
 }
 
@@ -438,15 +423,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -454,15 +436,9 @@ body {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-nav li a:hover, .social-nav li a:focus {
+.social-nav li a:hover,
+.social-nav li a:focus {
   background-color: #2196f3;
-  fill: #ffffff;
-}
-
-.social-nav li a:hover svg,
-.social-nav li a:focus svg {
-  width: 20px;
-  height: 20px;
   fill: #ffffff;
 }
 
@@ -470,6 +446,13 @@ body {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+}
+
+.social-nav li a:hover svg,
+.social-nav li a:focus svg {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
 }
 
 .section.client {
@@ -487,7 +470,7 @@ body {
   margin-right: 30px;
 }
 
-.client-nav li:last-child(6) {
+.client-nav li:nth-child(6) {
   margin-right: 0;
 }
 
@@ -515,10 +498,6 @@ body {
   border-radius: 4px;
 }
 
-.client-nav li a:hover, .client-nav li a:focus {
-  border-color: #2196f3;
-}
-
 .client-nav li a svg {
   fill: #afb1b8;
   display: block;
@@ -527,7 +506,13 @@ body {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-nav li a svg:hover, .client-nav li a svg:focus {
+.client-nav li a:hover,
+.client-nav li a:focus {
+  border-color: #2196f3;
+}
+
+.client-nav li a:hover svg,
+.client-nav li a:focus svg {
   fill: #2196f3;
   border-color: #2196f3;
 }
@@ -552,10 +537,9 @@ body {
   display: block;
   text-decoration: none;
   color: #000000;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  font-weight: 700;
-  letter-spacing: 0.03em;
 }
 
 .footer .blue {
@@ -580,8 +564,6 @@ body {
   text-decoration: none;
   font-size: 14px;
   line-height: 1.71;
-  font-weight: 400;
-  letter-spacing: 0.03em;
 }
 
 .addr-nav .phone {
@@ -591,7 +573,6 @@ body {
   font-size: 14px;
   line-height: 1.71;
   font-weight: 400;
-  letter-spacing: 0.03em;
   margin-bottom: 9px;
 }
 
@@ -599,17 +580,14 @@ body {
   color: #ffffff;
   font-size: 14px;
   line-height: 1.71;
-  font-weight: 400;
-  letter-spacing: 0.03em;
   margin: 0 0 9px 0;
 }
 
 .sign {
   color: #ffffff;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  font-weight: 700;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-top: 12px;
   margin-bottom: 20px;
@@ -631,7 +609,7 @@ body {
   margin-right: 10px;
 }
 
-.social-item:last-child(1) {
+.social-item:nth-last-child(1) {
   margin-right: 0;
 }
 
@@ -639,15 +617,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 44px;
   height: 44px;
   background-color: #ffffff1a;
@@ -656,14 +631,15 @@ body {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer .icon-social:hover, .footer .icon-social:focus {
-  background-color: #2196f3;
-}
-
 .footer .sign-network {
   width: 20px;
   height: 20px;
   color: #ffffff;
+}
+
+.footer .icon-social:hover,
+.icon-social:focus {
+  background-color: #2196f3;
 }
 
 .sign-up {
@@ -702,9 +678,9 @@ body {
   color: #ffffff;
   background-color: #2196f3;
   text-align: center;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  font-weight: 700;
   letter-spacing: 0.06em;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -772,12 +748,13 @@ button:focus-visible {
   background: #ffffff;
 }
 
-.modal-button:focus-visible {
-  outline: none;
+.modal-button:hover svg,
+.modal-button:focus svg {
+  fill: #2196f3;
 }
 
-.modal-button svg:hover, .modal-button svg:focus {
-  fill: #2196f3;
+.modal-button:focus-visible {
+  outline: none;
 }
 
 .modal-close {
@@ -795,11 +772,11 @@ button:focus-visible {
 .modal-title {
   margin-top: 0;
   margin-bottom: 12px;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  font-weight: 700;
-  letter-spacing: 0.03em;
   text-align: center;
+  letter-spacing: 0.03em;
   color: #212121;
 }
 
@@ -820,52 +797,33 @@ button:focus-visible {
   margin-bottom: 10px;
 }
 
+.form-field input {
+  padding-left: 42px;
+  cursor: pointer;
+}
+
+.form-field input:hover,
+.form-field textarea:hover {
+  outline: none;
+  border: 1px solid #2196f3;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border: 1px solid #2196f3;
+}
+
 .form-field:hover svg,
 .form-field:focus svg,
 .form-field:focus-within svg {
   fill: #2196f3;
 }
 
-.form-field::-webkit-input-placeholder {
-  color: rgba(117, 117, 117, 0.5);
-  font-size: 12px;
-}
-
-.form-field:-ms-input-placeholder {
-  color: rgba(117, 117, 117, 0.5);
-  font-size: 12px;
-}
-
-.form-field::-ms-input-placeholder {
-  color: rgba(117, 117, 117, 0.5);
-  font-size: 12px;
-}
-
-.form-field::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-  font-size: 12px;
-}
-
-.form-field input {
-  padding-left: 42px;
-  cursor: pointer;
-}
-
-.form-field input:hover, .form-field input:focus {
-  outline: none;
-  border: 1px solid #2196f3;
-}
-
-.form-field textarea:hover, .form-field textarea:focus {
-  outline: none;
-  border: 1px solid #2196f3;
-}
-
 .form-field label {
   font-size: 12px;
   line-height: 1.17;
-  font-weight: 0.01em;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
   margin-bottom: 4px;
   color: #757575;
 }
@@ -874,19 +832,15 @@ button:focus-visible {
   margin-bottom: 20px;
 }
 
+.form-input:hover .form-input:focus .form-input:hover svg {
+  color: #2196f3;
+}
+
 .form-input {
   margin: 0;
   padding: 11px 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-}
-
-.form-input:hover, .form-input:focus {
-  color: #2196f3;
-}
-
-.form-input:hover svg {
-  color: #2196f3;
 }
 
 .form-pic {
@@ -907,12 +861,31 @@ button:focus-visible {
   cursor: pointer;
 }
 
+.form-field ::-webkit-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+}
+
+.form-field :-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+}
+
+.form-field ::-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+}
+
+.form-field ::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+}
+
 .check-form {
   text-align: center;
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
-  font-weight: 0.03em;
   letter-spacing: 0.03em;
   color: #757575;
 }
@@ -995,9 +968,9 @@ button:focus-visible {
   min-height: 50px;
   padding: 10px 32px;
   border: 0;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-  font-weight: 700;
   letter-spacing: 0.06em;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -1044,14 +1017,6 @@ button:focus-visible {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project-element:nth-child(3n) {
-  margin-right: 0;
-}
-
-.project-element:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
-
 .project-element .title,
 .text {
   margin: 0;
@@ -1059,6 +1024,14 @@ button:focus-visible {
 
 .project-element .info > .text {
   margin-top: 4px;
+}
+
+.project-element:nth-child(3n) {
+  margin-right: 0;
+}
+
+.project-element:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
 
 .info {
@@ -1071,9 +1044,9 @@ button:focus-visible {
 
 .project-nav .title {
   color: #212121;
+  font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  font-weight: 700;
   letter-spacing: 0.06em;
 }
 
@@ -1081,8 +1054,6 @@ button:focus-visible {
   color: #757575;
   font-size: 16px;
   line-height: 1.87;
-  font-weight: 400;
-  letter-spacing: 0.03em;
 }
 
 .hidden-text {
@@ -1093,13 +1064,6 @@ button:focus-visible {
 .project-link {
   width: 100%;
   text-decoration: none;
-}
-
-.project-link:hover .accent-text,
-.project-link:focus .accent-text {
-  opacity: 1;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
 }
 
 .project-img {
@@ -1120,12 +1084,17 @@ button:focus-visible {
   color: #ffffff;
   font-size: 18px;
   line-height: 1.56;
-  font-weight: 400;
-  letter-spacing: 0.03em;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
+}
+
+.project-link:hover .accent-text,
+.project-link:focus .accent-text {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .button-nav {
@@ -1143,11 +1112,6 @@ button:focus-visible {
   padding: 6px 22px;
 }
 
-.button-nav .list-nav:hover, .button-nav .list-nav:focus {
-  background-color: #2196f3;
-  color: #ffffff;
-}
-
 .list-nav {
   height: 38px;
   margin-right: 8px;
@@ -1155,12 +1119,16 @@ button:focus-visible {
   border-radius: 4px;
   color: #212121;
   background-color: #f5f4fa;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  font-weight: 500;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-nav .list-nav:hover,
+.button-nav .list-nav:focus {
+  background-color: #2196f3;
+  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */
