@@ -1,0 +1,48 @@
+.sign-up {
+  padding-left: 93px;
+}
+
+.sign-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.sign-form input {
+  width: 358px;
+  margin: 0;
+  margin-right: 12px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: #2f303a;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sign-form .sign-up-btn {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  width: 200px;
+  height: 50px;
+  color: var(--main-background-color);
+  background-color: var(--accent-color);
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+}
+
+.sign-pic {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  vertical-align: middle;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
