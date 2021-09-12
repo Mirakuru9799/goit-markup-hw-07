@@ -1,4 +1,4 @@
-.project-nav {
+.project__nav {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -6,7 +6,7 @@
   margin: 0;
 }
 
-.project-element {
+.project__element {
   width: 370px;
   border: 1px solid #eeeeee;
   margin-right: 30px;
@@ -26,12 +26,12 @@
   }
 }
 
-.project-element .title,
+.project__element .title,
 .text {
   margin: 0;
 }
 
-.project-element .info > .text {
+.project__element .info > .text {
   margin-top: 4px;
 }
 
@@ -39,42 +39,42 @@
   padding: 20px 24px;
 }
 
-.project-nav a {
+.project__nav a {
   text-decoration: none;
 }
 
-.project-nav .title {
+.project__nav .title {
   color: $secondary-text-color;
   @include font(18px, 2, 700, 0.06em);
 }
 
-.project-nav .text {
+.project__nav .text {
   color: $additional-text-color;
   @include font(16px, 1.87);
 }
 
-.hidden-text {
+.hidden__text {
   position: relative;
   overflow: hidden;
 }
 
-.project-link {
+.project__link {
   width: 100%;
   text-decoration: none;
 
-  &:hover .accent-text,
-  &:focus .accent-text {
+  &:hover .accent__text,
+  &:focus .accent__text {
     opacity: 1;
     transform: translateY(0%);
   }
 }
 
-.project-img {
+.project__img {
   display: block;
   width: 100%;
 }
 
-.accent-text {
+.accent__text {
   position: absolute;
   top: 0;
   left: 0;

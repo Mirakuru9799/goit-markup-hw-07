@@ -1,4 +1,4 @@
-.footer-box {
+.footer__box {
   display: flex;
   padding-bottom: 60px;
   padding-top: 60px;
@@ -25,14 +25,14 @@
   color: $main-background-color;
 }
 
-.addr-nav {
+.addr__nav {
   width: 231px;
   height: 81px;
   font-style: normal;
   margin-top: 20px;
 }
 
-.addr-nav .mail {
+.addr__nav .mail {
   display: inline-block;
   margin-bottom: 9px;
   color: $primary-text-color;
@@ -40,7 +40,7 @@
   @include font(14px, 1.71);
 }
 
-.addr-nav .phone {
+.addr__nav .phone {
   display: inline-block;
   color: $primary-text-color;
   text-decoration: none;
@@ -48,7 +48,7 @@
   margin-bottom: 9px;
 }
 
-.addr-nav .adress {
+.addr__nav .adress {
   color: $main-background-color;
   @include font(14px, 1.71);
   margin: 0 0 9px 0;
@@ -62,25 +62,25 @@
   margin-bottom: 20px;
 }
 
-.social-sign {
+.social__sign {
   display: flex;
   list-style-type: none;
   padding: 0;
 }
 
-.footer-adress {
+.footer__adress {
   margin-right: 70px;
 }
 
-.social-item {
+.social__item {
   margin-right: 10px;
 
-  &:last-child(1) {
+  &:last-child {
     margin-right: 0;
   }
 }
 
-.footer .icon-social {
+.footer .icon__social {
   @include flexbox(flex, $ai: center);
   justify-content: center;
   width: 44px;
@@ -95,7 +95,7 @@
   }
 }
 
-.footer .sign-network {
+.footer .sign__network {
   width: 20px;
   height: 20px;
   color: $main-background-color;

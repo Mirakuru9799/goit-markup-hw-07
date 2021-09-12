@@ -1,11 +1,11 @@
-.button-nav {
+.button__nav {
   display: flex;
   list-style-type: none;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.button-nav .list-nav {
+.button__nav .list__nav {
   padding: 6px 22px;
 
   &:hover,
@@ -15,7 +15,7 @@
   }
 }
 
-.list-nav {
+.list__nav {
   height: 38px;
   margin-right: 8px;
   border: 0;

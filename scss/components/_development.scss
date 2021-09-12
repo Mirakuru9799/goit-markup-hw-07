@@ -1,10 +1,10 @@
 .development {
   padding: 0 0 94px 0;
 }
-.development-nav {
+.development__nav {
   display: flex;
 }
-.development-nav li {
+.development__nav li {
   margin: 0 30px 0 0;
 
   &:last-child(1) {
@@ -12,15 +12,15 @@
   }
 }
 
-.development-descr {
+.development__descr {
   position: relative;
 }
 
-.development-descr img {
+.development__descr img {
   display: block;
 }
 
-.dev-text {
+.dev__text {
   position: absolute;
   @include flexbox(flex, $ai: center);
   justify-content: center;

@@ -1,4 +1,4 @@
-.hero-box {
+.hero__box {
   @include flexbox(flex, $ai: center);
   flex-direction: column;
   justify-content: center;
@@ -18,7 +18,7 @@
   background-size: cover;
 }
 
-.hero-title {
+.hero__title {
   margin: 0 auto 30px auto;
   color: $main-background-color;
   width: 696px;

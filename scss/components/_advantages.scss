@@ -3,11 +3,11 @@
   padding-bottom: 94px;
 }
 
-.features-nav {
+.features__nav {
   display: flex;
 }
 
-.features-nav li {
+.features__nav li {
   width: 270px;
   margin: 0 30px 0 0;
 
@@ -16,11 +16,11 @@
   }
 }
 
-.features-flex .item + .item {
+.features__flex .item + .item {
   margin-right: 30px;
 }
 
-.features-nav .title {
+.features__nav .title {
   margin-top: 0;
   margin-bottom: 10px;
   color: $secondary-text-color;
@@ -28,13 +28,13 @@
   text-transform: uppercase;
 }
 
-.features-nav .text {
+.features__nav .text {
   margin-top: 0;
   color: $additional-text-color;
   @include font(14px, 1.71);
 }
 
-.icon-before::before {
+.icon__before::before {
   display: block;
   content: "";
   height: 120px;
@@ -61,7 +61,7 @@
   background-image: url("../images/astronaut.svg");
 }
 
-.section-title {
+.section__title {
   margin-top: 0;
   margin-bottom: 50px;
   color: $secondary-text-color;

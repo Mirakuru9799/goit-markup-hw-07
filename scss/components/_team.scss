@@ -3,14 +3,14 @@
   padding: 94px 0;
 }
 
-.team-list {
+.team__list {
   margin: 0;
   padding: 0;
   display: flex;
   list-style-type: none;
   text-align: center;
 }
-.team-list > li {
+.team__list > li {
   margin: 0 30px 0 0;
   padding: 0;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -25,7 +25,7 @@
   }
 }
 
-.team-descr {
+.team__descr {
   margin-top: 30px;
   margin-bottom: 16px;
 }
@@ -46,13 +46,13 @@
   color: $additional-text-color;
 }
 
-.social-nav {
+.social__nav {
   display: flex;
   margin: 16px 32px 30px 32px;
   transition: 2000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-nav li {
+.social__nav li {
   padding: 0 5px;
 
   &:nth-last-child(1) {
@@ -64,7 +64,7 @@
   }
 }
 
-.social-nav li a {
+.social__nav li a {
   @include flexbox(flex, $ai: center);
   justify-content: center;
   width: 44px;
@@ -86,7 +86,7 @@
   }
 }
 
-.social-nav li a svg {
+.social__nav li a svg {
   width: 20px;
   height: 20px;
   fill: $primary-text-color;
